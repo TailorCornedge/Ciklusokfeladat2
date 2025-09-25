@@ -140,8 +140,40 @@ namespace Ciklusokfeladat2
                     Console.WriteLine($"Szorozva {i} = {szam * i}");
                 }
             }
-
-
+            counter = 1;
+            while ( counter < 11)
+            {
+                string poz = "";
+                string par = "";
+                string oszt = "";
+                Console.WriteLine($"Adja meg a(z) {counter}. számot: ");
+                szam=int.Parse(Console.ReadLine());
+                if (szam > 0)
+                {
+                    poz = "pozitív";
+                }
+                else
+                {
+                    poz = "negatív";
+                }
+                if (szam % 2 == 0)
+                {
+                    par = "páros";
+                }
+                else
+                {
+                    par = "páratlan";
+                }
+                if (szam % 3 == 0) {
+                    oszt = "igen";
+                }
+                else
+                {
+                    oszt = "nem";
+                }
+                Console.WriteLine($"Ez a szám: {poz}; {par}; oztható hárommal: {oszt}");
+                counter++;
+            }
         }
     }
 }
