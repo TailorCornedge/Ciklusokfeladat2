@@ -5,6 +5,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.SqlServer.Server;
 
 namespace Ciklusokfeladat2
 {
@@ -174,6 +175,34 @@ namespace Ciklusokfeladat2
                 Console.WriteLine($"Ez a szám: {poz}; {par}; oztható hárommal: {oszt}");
                 counter++;
             }
+
+            counter = 1;
+            string jelsz = "";
+            while (counter !=3) {
+                Console.WriteLine($"Adja meg a jelszót ({counter}) ('titok')");
+                jelsz = Console.ReadLine();
+                if (jelsz == "titok")
+                {
+                    counter++;
+                }
+                else
+                {
+                    counter=1;
+                }
+                        }
+            List<char> bigyók = new List<char>();
+            Console.WriteLine("A jelszó megegyezik. adjon meg egy szöveget: ");
+            string körte =Console.ReadLine();
+            foreach (char s in körte)
+            {
+                bigyók.Add(s);
+            }
+            bigyók.Reverse();
+            körte = "";
+            foreach (char s in bigyók) { 
+            körte+= s;
+            }
+            Console.WriteLine(körte);
         }
     }
 }
