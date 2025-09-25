@@ -1,0 +1,7 @@
+C:\Users\szaboko\source\repos\Ciklusokfeladat2\Ciklusokfeladat2\obj\Debug\Ciklusokfeladat2.csproj.AssemblyReference.cache
+C:\Users\szaboko\source\repos\Ciklusokfeladat2\Ciklusokfeladat2\obj\Debug\Ciklusokfeladat2.csproj.CoreCompileInputs.cache
+C:\Users\szaboko\source\repos\Ciklusokfeladat2\Ciklusokfeladat2\bin\Debug\Ciklusokfeladat2.exe.config
+C:\Users\szaboko\source\repos\Ciklusokfeladat2\Ciklusokfeladat2\bin\Debug\Ciklusokfeladat2.exe
+C:\Users\szaboko\source\repos\Ciklusokfeladat2\Ciklusokfeladat2\bin\Debug\Ciklusokfeladat2.pdb
+C:\Users\szaboko\source\repos\Ciklusokfeladat2\Ciklusokfeladat2\obj\Debug\Ciklusokfeladat2.exe
+C:\Users\szaboko\source\repos\Ciklusokfeladat2\Ciklusokfeladat2\obj\Debug\Ciklusokfeladat2.pdb
