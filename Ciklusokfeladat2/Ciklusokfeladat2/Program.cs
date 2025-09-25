@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -50,7 +51,6 @@ namespace Ciklusokfeladat2
             }
             int paros = 0;
             int paratlan = 0;
-            int nulla = 0;
             foreach (int i in list)
             {
                 if (i % 2 == 0)
@@ -62,7 +62,24 @@ namespace Ciklusokfeladat2
                     paratlan += 1;
                 }
             }
-            Console.WriteLine($"A megadott számok közül van {paros} páros, {paratlan} páratlan, é {nulla} nulla értékű szám.");
+            Console.WriteLine($"A megadott számok közül van {paros} páros, {paratlan} páratlan szám.");
+            List<string> szavak = new List<string>();
+            string szo = "";
+            int nagyobb = 0;
+            while (szo != "vége")
+            {
+                Console.WriteLine("Adjon meg szavakat. Adja meg azt hogy 'vége' hogy leálljon: ");
+                szo = Console.ReadLine();
+                szavak.Add(szo);
+            }
+            foreach (string i in szavak)
+            {
+                if (i.Length > 5)
+                {
+                    nagyobb += 1;
+                }
+            }
+            Console.WriteLine($"{nagyobb} db 5 karakternél hosszab szót adott meg.");
         }
     }
 }
