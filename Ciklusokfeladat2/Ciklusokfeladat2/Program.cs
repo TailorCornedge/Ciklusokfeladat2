@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,6 +81,55 @@ namespace Ciklusokfeladat2
                 }
             }
             Console.WriteLine($"{nagyobb} db 5 karakternél hosszab szót adott meg.");
+
+            list.Clear();
+            counter = 1;
+            int osztalyzat = 0;
+            while (osztalyzat != -1)
+            {
+                Console.WriteLine($"Adja meg a(z) {counter}. osztályzatot (1-5). Adja meg az -1-es osztályzatot hogy ne kérjen több számot: ");
+                osztalyzat=int.Parse(Console.ReadLine());
+                if (osztalyzat != -1)
+                {
+                    list.Add(osztalyzat);
+                    counter += 1;
+                }
+                if (osztalyzat == -1)
+                {
+                    counter -= 1;
+                }
+            }
+            int egy = 0;
+            int kett = 0;
+            int har = 0;
+            int negy = 0;
+            int ot = 0;
+            foreach (int i in list)
+            {
+                if (i == 1)
+                {
+                    egy += 1;
+                }
+                else if (i == 2)
+                {
+                    kett += 1;
+                }
+                else if (i == 3) { 
+                har += 1;
+                }
+                else if (i == 4)
+                {
+                    negy += 1;
+                }
+                else
+                {
+                    ot += 1;
+                }
+            }
+            double atlag = (egy * 1 + kett * 2 + har * 3 + negy * 4 + ot * 5) / (counter);
+            Console.WriteLine($"egyes: {egy}; kettes: {kett}; hármas: {har}; négyes: {negy}; ötös: {ot}");
+            Console.WriteLine($"Átlag: {atlag}");
+                
         }
     }
 }
