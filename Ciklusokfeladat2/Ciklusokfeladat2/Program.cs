@@ -126,10 +126,22 @@ namespace Ciklusokfeladat2
                     ot += 1;
                 }
             }
-            double atlag = (egy * 1 + kett * 2 + har * 3 + negy * 4 + ot * 5) / (counter);
+            double sum = egy * 1 + kett * 2 + har * 3 + negy * 4 + ot * 5;
+            double atlag = sum / counter;
             Console.WriteLine($"egyes: {egy}; kettes: {kett}; hármas: {har}; négyes: {negy}; ötös: {ot}");
             Console.WriteLine($"Átlag: {atlag}");
-                
+
+            Console.WriteLine("Adjon meg egy számot: ");
+            szam=int.Parse( Console.ReadLine() );
+            for (int i = 1; i < 11; i++)
+            {
+                if ((szam*i) % 3 == 0)
+                {
+                    Console.WriteLine($"Szorozva {i} = {szam * i}");
+                }
+            }
+
+
         }
     }
 }
