@@ -203,6 +203,38 @@ namespace Ciklusokfeladat2
             körte+= s;
             }
             Console.WriteLine(körte);
+
+
+            List<int> szamoka = new List<int>();
+
+            int db = 0;
+            Console.WriteLine("Adjon meg egy számot.");
+            int szamla=int.Parse(Console.ReadLine());
+            for (int i = 1; i <= szamla; i++)
+            {
+                for (int j = 1; j <= 10; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        db++;
+                    }
+                }
+
+                if (db <= 2)
+                {
+                    szamoka.Add(i);
+                }
+
+                db = 0;
+            }
+
+            foreach (var item in szamoka)
+            {
+                Console.WriteLine(item);
+
+            }
+            Console.WriteLine($"{szamoka.Count} prím szám van.");
+        }
+
         }
     }
-}
