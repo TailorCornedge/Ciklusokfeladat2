@@ -22,6 +22,20 @@ namespace Ciklusokfeladat2
             {
                 Console.WriteLine($"{y} a nagyobb szám. A két szám közt lévő mennyiség: {y - x - 1}");
             }
+            int szam = 1;
+            List<int> list = new List<int>();
+            while (szam != 0)
+            {
+                Console.WriteLine("Adjon meg egy számot. Ha ki szeretne lépni adja meg 0-t értéknek: ");
+                szam = int.Parse(Console.ReadLine());
+                list.Add(szam);
+            }
+            var most = (from i in list
+                        group i by i into grp
+                        orderby grp.Count() descending
+                        select grp.Key).First();
+
+            Console.WriteLine($"A legtöbbször megadott szám: {most}");
         }
     }
 }
