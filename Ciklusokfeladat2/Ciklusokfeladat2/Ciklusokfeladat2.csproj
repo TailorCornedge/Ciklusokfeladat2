@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E5E20A42-5A15-4442-B359-547ED66E9F48}</ProjectGuid>
+    <ProjectGuid>{6B37583D-4125-4D6B-A75E-D1DE5F34F7E0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Ciklusokfeladat2</RootNamespace>
     <AssemblyName>Ciklusokfeladat2</AssemblyName>
